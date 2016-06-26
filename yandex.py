@@ -32,17 +32,17 @@ def txt_to_speach(filename, lang, outfile):
 	print cmd
 	#os.system("gtts-cli.py -f " + filename + " -l \'" + lang + "\' " + outfile)
 
-language = "ru"
+language = "es"
 outfile = "out.txt"
-#inword = "hello"
+inword = "lady"
 filename ="str.txt"
 
 clarifai_api = ClarifaiApi() 						# assumes environment variables are set.
-result = clarifai_api.tag_images(open('/home/niko/Downloads/image.jpg', 'rb'))
+#result = clarifai_api.tag_images(open('/home/niko/Downloads/image.jpg', 'rb'))
 
 # array of all the recognized objects
-objects = result['results'][0]['result']['tag']['classes']
-inword = objects[0]
+#objects = result['results'][0]['result']['tag']['classes']
+#inword = objects[0]
 
 word = translate(inword, language)
 process(word, filename)
