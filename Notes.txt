@@ -1,0 +1,13 @@
+1. Client-server communication between your computer and Max's
+2. Google text-to-speech engine api - simply converts the text - you need to feed it the word in the proper language - i.e. does not translate
+
+
+yandex key
+trnsl.1.1.20160625T232425Z.70e416debf73b2a6.1364163d0d7558037cc9fc300df23df12f2ff108
+
+
+export CLARIFAI_APP_SECRET=ASYQAX_p6lFe9CEIYdouZZ84gzmekkmjHuaW0RZ_
+export CLARIFAI_APP_ID=JsRIvagmTO6GRKdCm0tTKCGHiYgaYgWk273hbwpe
+
+
+
