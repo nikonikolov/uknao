@@ -11,9 +11,12 @@ def process(str_data, filename):
 	jsonobj = json.loads(str_data)
 	utf_list_of_strings = jsonobj['text']
 	f = open(filename, 'w')
+	test_string = ""
 	for i in utf_list_of_strings:
 		f.write(i.encode('utf8'))
+		test_string = test_string + i.encode('utf8')
 	f.close()
+	print test_string
 
 def translate(text, dest_lang, src_lang='en'):
 	url = 'https://translate.yandex.net/api/v1.5/tr.json/translate?'
