@@ -7,17 +7,17 @@ def  doStuff() :
 	# get the image
 	tts.say("Getting image")
 	myURL = mem.getData("LanguageLearner/ImageURL")
-	urllib.urlretrieve(myURL, "C:/Users/Max/Documents/UK-NAO-hackathon/PepperPic.jpg")
+	urllib.urlretrieve(myURL, "C:/Users/Max/Documents/My Stuff/UK-NAO-hackathon/PepperPic.jpg")
 
 	# image processing
 	tts.say("Processing image")
 	clarifai_api = ClarifaiApi() # assumes environment variables are set.
-	result = clarifai_api.tag_images(open( "C:/Users/Max/Documents/UK-NAO-hackathon/PepperPic.jpg", 'rb'))
+	result = clarifai_api.tag_images(open( "C:/Users/Max/Documents/My Stuff/UK-NAO-hackathon/PepperPic.jpg", 'rb'))
 	resultList = result['results'][0]['result']['tag']['classes']
 
 	# Return the result to Pepper
-	print str(resultsList[0])
-	tts.say("I think this is a " + str(resultsList[0]))
+	print str(resultList[0])
+	tts.say("I think this is a " + str(resultList[0]))
 	mem.insertData("LanguageLearner/Object",resultList[0])
 
 
